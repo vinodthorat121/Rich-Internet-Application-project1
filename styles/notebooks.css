@@ -1,0 +1,75 @@
+body {
+    margin:0px;
+    font-family: 'Alegreya', serif;
+    font-size: 16px;
+}
+
+#result #notes button, button#create, button#cancel, .modal-footer button, .create-note button{
+    width: 80px;
+    border-radius:3px;
+}
+
+.container {
+    position:relative;
+    width:960px;
+    margin:auto;
+}
+
+.title {
+    margin-top: 15px;
+    padding:10px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    color: white;
+    background:#34495e;
+}
+
+.title h1 {
+    margin:0px;
+    font-family: 'Alegreya', serif;
+    font-size: 36px;
+    text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+}
+
+.create-note {
+    padding:10px;
+    border-bottom:1px solid;
+}
+
+
+.create-note-form {
+    display:block;
+    height:440px;
+    padding:10px;
+    background:#ecf0f1;
+    overflow:hidden;
+    display:none;
+}
+
+.create-note-form label {
+    font-family: 'Alegreya', serif;
+    font-size: 16px;
+    position:relative;
+    display:block;
+    width:300px;
+    height:10px;
+    float:left;
+    padding:10px;
+    font-weight:bold;
+}
+
+.create-note-form input,textarea {
+    border:1px solid #ccc;
+    width:50%;
+    padding:10px;
+    margin: 5px 0;
+    border-radius:5px;
+    box-shadow:inset 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+#create,#cancel {
+    position:relative;
+    left:300px;
+    border:1px;
+    
+}

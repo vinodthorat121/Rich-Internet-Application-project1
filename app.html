@@ -1,0 +1,111 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NoteBook</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Alegreya|Slabo+27px" rel="stylesheet">
+  	
+	<link rel="stylesheet" href="styles/notebooks.css">
+	<script src="scripts/notebooks.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			<h1>Note Book Application</h1>
+		</div>
+		<div class="create-note">
+			<button id="add" type="button" class="btn btn-info">Add Note</button>
+		</div>
+		<div class="create-note-form">
+			<label for="author">Name:</label>
+			<input type="text" id="author" class="form-inputs">
+			<label for="subject">Subject:</label>
+			<input type="text" id="subject" class="form-inputs">
+			<label for="message">Message:</label>
+			<textarea name="message" id="message" cols="30" rows="10" class="form-inputs"></textarea>
+			<br><br>
+			<button id="create" type="button" class="btn btn-info">Create</button>
+			<button id="cancel" type="button" class="btn btn-info">Cancel</button>
+		</div>		
+	</div>
+	
+	<div class="notebookWrapper col-sm-5 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<h1 id="noteTitle">NoteBook Records:</h1>
+		<div class="table-responsive">
+			<table id="result" class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Subject</th>
+						<th>Note Character Count</th>
+						<th>TimeStamp</th>
+					</tr>
+				</thead>
+				<tbody id="notes">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- Modal Note View -->
+<div class="modal fade" id="view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Notes Details</h4>
+      </div>
+      <div id="modal-body" 	class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+<div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="updateModalLabel">Note Details</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" style="display: none;" class="form-control" id="modal-note-id">
+          </div>
+          <div class="form-group">
+            <label for="name" class="control-label">Name:</label>
+            <input type="text" class="form-control" id="modal-name">
+          </div>
+          <div class="form-group">
+            <label for="subject" class="control-label">Subject:</label>
+            <input type="text" class="form-control" id="modal-subject">
+          </div>
+          <div class="form-group">
+            <label for="message" class="control-label">Message:</label>
+            <textarea class="form-control" id="modal-message"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        <button id="update-button" type="button" class="btn btn-info">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
